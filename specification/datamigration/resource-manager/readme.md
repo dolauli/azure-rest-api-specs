@@ -370,6 +370,7 @@ swagger-to-sdk:
   - repo: azure-sdk-for-node
   - repo: azure-sdk-for-java
   - repo: azure-resource-manager-schemas
+  - repo: azure-powershell
 ```
 
 ## C#
