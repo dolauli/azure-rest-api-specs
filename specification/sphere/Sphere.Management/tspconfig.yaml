@@ -23,7 +23,7 @@ options:
     namespace: Azure.Sphere
     model-namespace: false
   '@azure-tools/typespec-powershell':
-    package-dir: "spheremanager"
+    package-dir: "Sphere/Sphere.Autorest"
     azure: true
     module-version: 0.1.0
     skip-model-cmdlets: false
@@ -47,7 +47,6 @@ options:
     dll-name: "{module-name}.private"
     use-namespace-folders: false
     current-folder: "./"
-    output-folder: "src/Sphere.Autorest"
     module-folder: "{current-folder}/generated"
     cmdlet-folder: "{module-folder}/cmdlets"
     model-cmdlet-folder: "{custom-cmdlet-folder}/autogen-model-cmdlets"
