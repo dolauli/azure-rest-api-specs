@@ -46,8 +46,8 @@ options:
     namespace: "Microsoft.Azure.PowerShell.Cmdlets.{service-name}"
     dll-name: "{module-name}.private"
     use-namespace-folders: false
-    current-folder: "{emitter-output-dir}"
-    output-folder: "{emitter-output-dir}"
+    current-folder: "./"
+    output-folder: "src/Sphere.Autorest"
     module-folder: "{current-folder}/generated"
     cmdlet-folder: "{module-folder}/cmdlets"
     model-cmdlet-folder: "{custom-cmdlet-folder}/autogen-model-cmdlets"
