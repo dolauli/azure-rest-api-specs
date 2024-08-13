@@ -25,6 +25,7 @@ options:
   '@azure-tools/typespec-powershell':
     service-dir: "src"
     package-dir: "Sphere/Sphere.Autorest"
+    clear-output-folder: true
     azure: true
     module-version: 0.1.0
     skip-model-cmdlets: false
