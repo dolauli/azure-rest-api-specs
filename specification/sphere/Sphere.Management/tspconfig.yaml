@@ -49,7 +49,6 @@ options:
     dll-name: "{module-name}.private"
     use-namespace-folders: false
     current-folder: "./"
-    output-folder: "{service-dir}/{package-dir}"
     module-folder: "{current-folder}/generated"
     cmdlet-folder: "{module-folder}/cmdlets"
     model-cmdlet-folder: "{custom-cmdlet-folder}/autogen-model-cmdlets"
