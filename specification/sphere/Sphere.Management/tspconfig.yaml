@@ -48,6 +48,7 @@ options:
     namespace: "Microsoft.Azure.PowerShell.Cmdlets.{service-name}"
     dll-name: "{module-name}.private"
     use-namespace-folders: false
+    output-folder: "{output-dir}"
     current-folder: "./"
     module-folder: "{current-folder}/generated"
     cmdlet-folder: "{module-folder}/cmdlets"
