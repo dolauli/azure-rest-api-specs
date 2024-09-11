@@ -15,6 +15,33 @@ options:
     package-dir: "azure-ai-resources-autogen"
     package-name: "{package-dir}"
     flavor: azure
+  '@azure-tools/typespec-powershell':
+    service-dir: "src"
+    package-dir: "MachineLearningServices/MachineLearningServicesdata.Autorest"
+    clear-output-folder: true
+    azure: true
+    module-version: 0.1.0
+    skip-model-cmdlets: false
+    help-link-prefix: https://learn.microsoft.com/powershell/module/
+    metadata:
+      authors: Microsoft Corporation
+      owners: Microsoft Corporation
+      description: 'Microsoft Azure PowerShell: MachineLearningServices cmdlets'
+      copyright: Microsoft Corporation. All rights reserved.
+      tags: Azure ResourceManager ARM PSModule MachineLearningServices
+      companyName: Microsoft Corporation
+      requireLicenseAcceptance: true
+      licenseUri: https://aka.ms/azps-license
+      projectUri: https://github.com/Azure/azure-powershell
+    prefix: 'Az'
+    subject-prefix: 'MLWorkspace'
+    title: MachineLearningServices
+    service-name: MachineLearningServices
+    module-name: "{prefix}.{service-name}"
+    namespace: "Microsoft.Azure.PowerShell.Cmdlets.{service-name}"
+    endpoint-resource-id-key-name: AzureMachineLearningServicesEndpointResourceId
+    dll-name: "{module-name}.private"
+    use-namespace-folders: false
 linter:
   extends:
     - "@azure-tools/typespec-azure-rulesets/data-plane"
