@@ -50,6 +50,9 @@ options:
       - where:
           variant: ^(Create|Update)(?!.*?Expanded|ViaJsonString|ViaJsonFilePath)
         remove: true
+      - where:
+          verb: Set
+        hide: true
 linter:
   extends:
     - "@azure-tools/typespec-azure-rulesets/resource-manager"
