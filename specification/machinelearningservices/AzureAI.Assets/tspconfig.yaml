@@ -40,8 +40,23 @@ options:
     module-name: "{prefix}.{service-name}"
     namespace: "Microsoft.Azure.PowerShell.Cmdlets.{service-name}"
     endpoint-resource-id-key-name: AzureMachineLearningServicesEndpointResourceId
-    dll-name: "{module-name}.private"
     use-namespace-folders: false
+    output-folder: "{output-dir}"
+    exclude-tableview-properties:
+      - Id
+      - Type
+    directive:
+      - where:
+          subject: Operation
+        hide: true
+      - where:
+          parameter-name: SubscriptionId
+        set:
+          default:
+            script: '(Get-AzContext).Subscription.Id'
+      - where:
+          variant: ^(Create|Update)(?!.*?Expanded|ViaJsonString|ViaJsonFilePath)
+        remove: true
 linter:
   extends:
     - "@azure-tools/typespec-azure-rulesets/data-plane"
