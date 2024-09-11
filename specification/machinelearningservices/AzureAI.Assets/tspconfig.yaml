@@ -57,6 +57,15 @@ options:
       - where:
           variant: ^(Create|Update)(?!.*?Expanded|ViaJsonString|ViaJsonFilePath)
         remove: true
+      - where:
+          verb: Set
+        hide: true
+      - no-inline:
+          - InnerError
+      - where:
+          model-name: ErrorResponse
+        set:
+          model-name: AzureCoreFoundationsErrorResponse
 linter:
   extends:
     - "@azure-tools/typespec-azure-rulesets/data-plane"
